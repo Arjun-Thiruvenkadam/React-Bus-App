@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-align:center;
   }
 
   body.fontLoaded {
@@ -21,10 +22,9 @@ const GlobalStyle = createGlobalStyle`
     min-width: 100%;
   }
 
-  p,
   label {
-    font-family: Georgia, Times, 'Times New Roman', serif;
-    line-height: 1.5em;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 2em;
   }
 `;
 
