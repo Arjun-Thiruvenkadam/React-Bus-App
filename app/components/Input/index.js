@@ -5,24 +5,20 @@
  */
 
 import React from 'react';
-import InputContainer from './inputContainer';
-import StyledLabel from './styledLabel';
-import StyledInput from './input';
-import StyledTextArea from './textArea';
-import StyledSelect from './select'; 
+import './input.scss';
 
 const Input = props => {
   let inputElement = null;
-  const inputClasses = [classes.InputElement];
+  const inputClasses = ['InputElement'];
 
   if (props.invalid && props.shouldValidate && props.touched) {
-    inputClasses.push(classes.Invalid);
+    inputClasses.push('Invalid');
   }
 
   switch (props.elementType) {
     case 'input':
       inputElement = (
-        <StyledInput
+        <input
           className={inputClasses.join(' ')}
           {...props.elementConfig}
           value={props.value}
@@ -32,7 +28,7 @@ const Input = props => {
       break;
     case 'textarea':
       inputElement = (
-        <StyledTextArea
+        <textarea
           className={inputClasses.join(' ')}
           {...props.elementConfig}
           value={props.value}
@@ -42,7 +38,7 @@ const Input = props => {
       break;
     case 'select':
       inputElement = (
-        <StyledSelect
+        <select
           className={inputClasses.join(' ')}
           value={props.value}
           onChange={props.changed}
@@ -52,12 +48,12 @@ const Input = props => {
               {option.displayValue}
             </option>
           ))}
-        </StyledSelect>
+        </select>
       );
       break;
     default:
       inputElement = (
-        <StyledInput
+        <input
           className={inputClasses.join(' ')}
           {...props.elementConfig}
           value={props.value}
@@ -67,10 +63,10 @@ const Input = props => {
   }
 
   return (
-    <InputContainer>
-      <StyledLabel>{props.label}</StyledLabel>
+    <div className='Input'>
+      <label className='Label'>{props.label}</label>
       {inputElement}
-    </InputContainer>
+    </div>
   );
 };
 

@@ -4,30 +4,26 @@
  *
  */
 
-import React from 'react';
+import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
 import { FormattedMessage } from 'react-intl';
 import { compose } from 'redux';
-import NavigationBar from './navigationBar';
-import NavigationHolder from './navigationHolder';
-import NavigationItem from './navigationItem';
-import Logo from '../../components/Logo/index';
-
 import messages from './messages';
+import NavigationItem from '../../components/NavigationItem/index';
+import './navigationHolder.scss';
 
 function Navigation() {
   return (
-    <NavigationBar>
-      <Logo/>
-      <NavigationHolder>
+    <Fragment>
+      <ul className='NavigationItems'>
         <NavigationItem link="/" exact>
           <FormattedMessage {...messages.home} />
         </NavigationItem>
         <NavigationItem link="/order">
           <FormattedMessage {...messages.book} />
         </NavigationItem>
-      </NavigationHolder>
-    </NavigationBar>
+      </ul>
+    </Fragment>
   );
 }
 

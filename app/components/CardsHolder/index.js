@@ -10,20 +10,19 @@ import React from 'react';
 
 import { FormattedMessage } from 'react-intl';
 import messages from './messages';
-import Holder from './holder';
 import Card from '../Card/index';
 import Safety from '../../images/safety.png';
 import Price from '../../images/price.png';
-import StyledNavLink from '../StyledNavLink/index';
-import H3 from '../H3/index';
+import './holder.scss';
+import { NavLink } from 'react-router-dom';
 
 const CardsHolder = () => {
   return (
-    <Holder>
+    <div className='CardsHolder'>
       <br/>
-      <H3>
+      <h3>
         <FormattedMessage {...messages.header} />
-      </H3>
+      </h3>
       <br/>
       <Card image={Safety} name="Safety">
         <FormattedMessage {...messages.card1} />
@@ -33,12 +32,13 @@ const CardsHolder = () => {
       </Card>
       <br />
       <br />
-      <StyledNavLink to="/">
+      <NavLink className='Navlink' to="/order">
         <FormattedMessage {...messages.book} />
-      </StyledNavLink>
+      </NavLink>
       <br />
       <br />
-    </Holder>
+    </div>
+    
   );
 };
 

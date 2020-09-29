@@ -1,0 +1,29 @@
+.container {
+  margin: 100px auto auto auto;
+  width: 95%;
+  font-family: 'Montserrat';
+  font-size: medium;
+}
+
+.bookBtn {
+  color: #0f3460;
+  background-color: #66bfbf;
+  margin-top: 20px auto;
+  width: 80px;
+  height: 35px;
+  border: 1px solid #66bfbf;
+  transition-duration: 0.3s;
+  transition-property: all;
+  font-size: large;
+}
+
+.bookBtn:hover {
+  font-size: larger;
+  width: 87px;
+  height: 42px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}

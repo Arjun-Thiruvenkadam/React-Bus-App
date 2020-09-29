@@ -6,20 +6,17 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-// import styled from 'styled-components';
-import StyledButton from './button';
+import './button.scss';
 
-function Button(props) {
-  return (
-    <StyledButton
-      onClick={props.clicked}
-      disabled={props.disable}
-      btnType={props.btnType}
-    >
-      {props.children}
-    </StyledButton>
-  );
-}
+const Button = props => (
+  <button
+    onClick={props.clicked}
+    className={['Button', props.btnType].join(' ')}
+    disabled={props.disable}
+  >
+    {props.children}
+  </button>
+);
 
 Button.propTypes = {
   clicked: PropTypes.func,

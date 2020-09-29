@@ -1,0 +1,75 @@
+.order {
+  font-family: 'Montserrat', sans-serif;
+  font-size: medium;
+  background-color: white;
+  width: 108px;
+  display: inline-block;
+  padding: 0px 15px;
+  border: black solid 2px;
+  margin: 10px;
+  position: relative;
+  transition-property: transform;
+  transition-duration: 0.3s;
+}
+
+.order .tooltipText {
+  position: absolute;
+  visibility: hidden;
+  width: max-content;
+  z-index: 1;
+  background-color: whitesmoke;
+  border: 2px solid black;
+  opacity: 0;
+  transition: opacity 0.6s;
+  line-height: 4px;
+  bottom: 110%;
+}
+
+.order:hover {
+  background-color: wheat;
+}
+
+.order:hover .tooltipText {
+  visibility: visible;
+  opacity: 1;
+}
+
+.order .tooltipText i {
+  position: absolute;
+  top: 100%;
+  margin-left: -12px;
+  width: 24px;
+  height: 12px;
+  overflow: hidden;
+}
+
+.order .tooltipText i::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background-color: #eeeeee;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+}
+
+.red {
+  background-color: #ff5252;
+}
+
+.red:hover {
+  background-color: #ff8a80;
+}
+
+.booking {
+  background-color: #00e676;
+  transform: scale(1.1, 1.1);
+}
+
+.booking:hover {
+  background-color: #69f0ae;
+}
+
+.hidden {
+  display: none;
+}

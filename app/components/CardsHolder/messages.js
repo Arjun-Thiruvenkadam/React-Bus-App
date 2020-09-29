@@ -16,7 +16,7 @@ export default defineMessages({
   card1: {
     id: `${scope}.card1`,
     defaultMessage:
-      'We provide only the best for our customers.We take extra measures to ensure your safe travel.',
+      'We provide only the best for our customers. We take extra measures to ensure your safe travel.',
   },
   card2: {
     id: `${scope}.card2`,

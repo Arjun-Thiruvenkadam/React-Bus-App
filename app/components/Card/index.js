@@ -6,18 +6,15 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import CardStyle from './card';
-import Image from '../Image/index';
+import './card.scss';
 
-const Card = (props) => {
-  return (
-    <CardStyle>
-      <Image src={props.image} alt={props.name} />
+const Card = (props) => (
+  <div className='Card'>
+      <img src={props.image} alt={props.name}></img>
       <h3>{props.name}</h3>
       <p>{props.children}</p>
-    </CardStyle>
-  );
-}
+  </div>
+);
 
 Card.propTypes = {
   name: PropTypes.string,

@@ -7,17 +7,17 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import messages from './messages';
-import LogoStyle from './logoStyle';
 import Bus from '../../images/bus.png';
+import './logo.scss';
 
 function Logo() {
   return (
-    <LogoStyle>
+    <div className='Logo'>
       <img src={Bus} alt="Bus" />
       <p>
         <FormattedMessage {...messages.logo} />
       </p>
-    </LogoStyle>
+    </div>
   );
 }
 

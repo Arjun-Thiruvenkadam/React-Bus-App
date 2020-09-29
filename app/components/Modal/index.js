@@ -6,24 +6,23 @@
 
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import StyledModal from './modal';
 import Backdrop from '../Backdrop/index';
+import './modal.scss';
 
-const Modal = props => {
-  return (
-    <Fragment>
-      <Backdrop show={props.show} clicked={props.modalClosed} />
-      <StyledModal
-        style={{
-          visibility: props.show ? 'visible' : 'hidden',
-          opacity: props.show ? '1' : '0',
-        }}
-      >
-        {props.children}
-      </StyledModal>
-    </Fragment>
-  );
-};
+const Modal = props => (
+  <Fragment>
+    <Backdrop show={props.show} clicked={props.modalClosed} />
+    <div
+      className='Modal'
+      style={{
+        visibility: props.show ? 'visible' : 'hidden',
+        opacity: props.show ? '1' : '0',
+      }}
+    >
+      {props.children}
+    </div>
+  </Fragment>
+);
 
 Modal.propTypes = {
   show: PropTypes.bool,

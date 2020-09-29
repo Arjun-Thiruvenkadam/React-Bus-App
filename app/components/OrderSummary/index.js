@@ -1,0 +1,53 @@
+/**
+ *
+ * OrderSummary
+ *
+ */
+
+import React, { Fragment } from 'react';
+import { FormattedMessage } from 'react-intl';
+import messages from './messages';
+import Button from '../Button/index';
+
+const OrderSummary = props => {
+  const ticketsId = props.tickets.sort((a, b) => a.ticketId - b.ticketId);
+  const tickets = ticketsId.map(ticket => {
+    return (
+      <p
+        key={ticket.ticketId}
+        style={{
+          display: 'inline-block',
+          border: '3px solid white',
+          margin: 'auto',
+        }}
+      >
+        {ticket.ticketId}{' '}
+      </p>
+    );
+  });
+  return (
+    <Fragment>
+      <h2 style={{ color: '#0f3460' }}>
+        <FormattedMessage {...messages.header} />
+      </h2>
+      <h4>
+        <FormattedMessage {...messages.headMessage} />
+      </h4>
+      <h4>
+        <FormattedMessage {...messages.tickets} />
+      </h4>
+      {tickets}
+      <h4>
+        <FormattedMessage {...messages.checkout} />
+      </h4>
+      <Button clicked={props.cancelOrder} btnType="Danger">
+        <FormattedMessage {...messages.cancel} />
+      </Button>
+      <Button clicked={props.completeOrder} btnType="Success">
+        <FormattedMessage {...messages.continue} />
+      </Button>
+    </Fragment>
+  );
+};
+
+export default OrderSummary;

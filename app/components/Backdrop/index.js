@@ -5,10 +5,18 @@
  */
 
 import React from 'react';
-import StyledDiv from './backdrop';
+import PropTypes from 'prop-types';
+import './backdrop.scss';
 
-function Backdrop(props) {
-  return props.show ? <StyledDiv onClick={props.clicked}></StyledDiv> : null;
-}
+const Backdrop = props => {
+  return props.show ? (
+    <div className={'backdrop'} onClick={props.clicked} />
+  ) : null;
+};
+
+Backdrop.propTypes = {
+  show: PropTypes.bool.isRequired,
+  clicked: PropTypes.func.isRequired,
+};
 
 export default Backdrop;
