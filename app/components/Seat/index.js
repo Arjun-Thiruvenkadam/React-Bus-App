@@ -24,10 +24,6 @@ const Seat = props => {
   return (
     <Fragment>
       <div className={styleClasses.join(' ')} onClick={onClickHandler}>
-        <div className={tooltipClass}>
-          <p>Name : {props.name}</p>
-          <i />
-        </div>
         <p>SEAT : {props.id}</p>
       </div>
     </Fragment>

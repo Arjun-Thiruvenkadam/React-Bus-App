@@ -11,6 +11,7 @@ import { compose } from 'redux';
 
 import { useInjectSaga } from 'utils/injectSaga';
 import { useInjectReducer } from 'utils/injectReducer';
+import { makeSelectAuthenticated } from '../Auth/selectors';
 import * as selectors from './selectors';
 import reducer from './reducer';
 import saga from './saga';
@@ -29,20 +30,21 @@ export function Orders(props) {
     fetch();
   }, []);
 
-  localStorage.setItem('userId','5f465cf7a8ecff62f072353e');
-
   let order = props.tickets.map(ticket => (
     <Seat
       id={ticket.ticketId}
       key={ticket.ticketId}
       status={ticket.status}
       clicked={() => props.selectTicketHandler(ticket.ticketId)}
-      name={ticket.personName}
     />
   ));
 
   if (props.showSpinner) {
     order = <Spinner />;
+  }
+
+  if(!props.authenticated){
+    order = 'Please Login'
   }
 
   let btnClass = 'hidden';
@@ -86,6 +88,7 @@ const mapStateToProps = createStructuredSelector({
   tickets: selectors.makeSelectTickets(),
   shouldUpdate: selectors.makeSelectShouldUpdate(),
   selectedTickets: selectors.makeSelectSelectedTickets(),
+  authenticated: makeSelectAuthenticated(),
 });
 
 function mapDispatchToProps(dispatch) {

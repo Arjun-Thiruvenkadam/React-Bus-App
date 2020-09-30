@@ -8,26 +8,16 @@ import React, { Fragment } from 'react';
 import { FormattedMessage } from 'react-intl';
 import messages from './messages';
 import Button from '../Button/index';
+import './orderSummary.scss';
 
 const OrderSummary = props => {
   const ticketsId = props.tickets.sort((a, b) => a.ticketId - b.ticketId);
   const tickets = ticketsId.map(ticket => {
-    return (
-      <p
-        key={ticket.ticketId}
-        style={{
-          display: 'inline-block',
-          border: '3px solid white',
-          margin: 'auto',
-        }}
-      >
-        {ticket.ticketId}{' '}
-      </p>
-    );
+    return <p key={ticket.ticketId}>{ticket.ticketId} </p>;
   });
   return (
-    <Fragment>
-      <h2 style={{ color: '#0f3460' }}>
+    <div className='orderSummary'>
+      <h2>
         <FormattedMessage {...messages.header} />
       </h2>
       <h4>
@@ -46,7 +36,7 @@ const OrderSummary = props => {
       <Button clicked={props.completeOrder} btnType="Success">
         <FormattedMessage {...messages.continue} />
       </Button>
-    </Fragment>
+    </div>
   );
 };
 

@@ -15,6 +15,8 @@ import Orders from '../Orders/index';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import Layout from '../../components/Layout/index';
 import GlobalStyle from '../../global-styles';
+import Auth from '../Auth/index';
+import Logout from '../Auth/logout';
 
 export default function App() {
   return (
@@ -23,6 +25,8 @@ export default function App() {
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route path='/order' component={Orders}/>
+          <Route path='/login' component={Auth}/>
+          <Route path="/logout" component={Logout}/>
           <Route component={NotFoundPage} />
         </Switch>
       </Layout>
