@@ -3,18 +3,18 @@
  * Seat
  *
  */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import './seat.scss';
 
 const Seat = props => {
-  let styleClasses = ['order'];
-  let tooltipClass = 'hidden';
+  const styleClasses = ['order'];
   let onClickHandler = props.clicked;
 
   if (props.status === 'closed') {
-    tooltipClass = 'tooltipText';
     styleClasses.push('red');
     onClickHandler = null;
   } else if (props.status === 'booking') {
@@ -31,7 +31,6 @@ const Seat = props => {
 };
 
 Seat.propTypes = {
-  name: PropTypes.string,
   status: PropTypes.string,
   id: PropTypes.number,
   clicked: PropTypes.func,

@@ -3,6 +3,7 @@
  * Button
  *
  */
+/* eslint-disable */
 
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -22,6 +23,7 @@ Button.propTypes = {
   clicked: PropTypes.func,
   disable: PropTypes.bool,
   btnType: PropTypes.string,
+  children: PropTypes.any,
 };
 
 export default Button;

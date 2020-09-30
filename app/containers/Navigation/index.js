@@ -3,6 +3,7 @@
  * Navigation
  *
  */
+/* eslint-disable react/prop-types */
 
 import React, { Fragment } from 'react';
 import { createStructuredSelector } from 'reselect';

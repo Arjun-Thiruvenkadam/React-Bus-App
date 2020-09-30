@@ -14,7 +14,7 @@ import './home.scss';
 
 export default function HomePage() {
   return (
-    <div className={'Home'}>
+    <div className="Home">
       <h1>
         <FormattedMessage {...messages.header} />
       </h1>

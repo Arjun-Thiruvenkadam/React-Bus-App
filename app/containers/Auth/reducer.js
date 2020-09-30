@@ -72,7 +72,9 @@ const authReducer = (state = initialState, action) =>
             state.controls[action.controlName].validation,
           );
           nextState.controls[action.controlName].touched = true;
-        } catch (e) {}
+        } catch (e) {
+          break;
+        }
         break;
       case actionTypes.START_LOADING:
         nextState.loading = true;

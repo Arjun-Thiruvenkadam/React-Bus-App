@@ -12,7 +12,7 @@ import './logo.scss';
 
 function Logo() {
   return (
-    <div className='Logo'>
+    <div className="Logo">
       <img src={Bus} alt="Bus" />
       <p>
         <FormattedMessage {...messages.logo} />

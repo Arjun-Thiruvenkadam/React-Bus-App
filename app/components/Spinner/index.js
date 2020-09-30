@@ -10,7 +10,7 @@ import messages from './messages';
 import './spinner.scss';
 
 const Spinner = () => (
-  <div className='Loader'>
+  <div className="Loader">
     <h3>
       <FormattedMessage {...messages.header} />
     </h3>

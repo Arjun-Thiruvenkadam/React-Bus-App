@@ -15,7 +15,10 @@ export function* submitSaga(action) {
   yield put(actions.startLoading());
   const state = yield select(makeSelectAuth());
   const response = yield getResponse(state);
-  if (response.data === 'Check email and password') {
+  if (
+    response.data === 'Check email and password' ||
+    response.data === 'Email already registered'
+  ) {
     yield put(actions.invalid());
   } else {
     localStorage.setItem('userId', response.data.token);

@@ -1,7 +1,7 @@
 import { takeEvery, put, select } from 'redux-saga/effects';
+import axios from 'axios';
 import * as actionTypes from './constants';
 import * as actions from './actions';
-import axios from 'axios';
 import * as selectors from './selectors';
 import { createTicket, updateTickets } from './utility';
 
@@ -23,17 +23,17 @@ export function* fetchDataSaga() {
 }
 
 export function* completeBookingSaga() {
-  let tickets = yield select(selectors.makeSelectTickets());
-  let selectedTickets = yield select(selectors.makeSelectSelectedTickets());
-  let ticketsPayload = [];
- 
+  const tickets = yield select(selectors.makeSelectTickets());
+  const selectedTickets = yield select(selectors.makeSelectSelectedTickets());
+  const ticketsPayload = [];
+
   yield put(actions.showSpinner());
   const userId = yield localStorage.getItem('userId');
   selectedTickets.forEach(ticket => {
     ticketsPayload.push(createTicket(ticket, userId));
   });
 
-  let response = yield axios.put(
+  const response = yield axios.put(
     'https://nestjs-bus-api.herokuapp.com/tickets/update',
     ticketsPayload,
   );

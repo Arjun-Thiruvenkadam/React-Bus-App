@@ -13,7 +13,7 @@ const Modal = props => (
   <Fragment>
     <Backdrop show={props.show} clicked={props.modalClosed} />
     <div
-      className='Modal'
+      className="Modal"
       style={{
         visibility: props.show ? 'visible' : 'hidden',
         opacity: props.show ? '1' : '0',
@@ -27,6 +27,7 @@ const Modal = props => (
 Modal.propTypes = {
   show: PropTypes.bool,
   modalClosed: PropTypes.func.isRequired,
+  children: PropTypes.any,
 };
 
 export default Modal;

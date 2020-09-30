@@ -3,6 +3,7 @@
  * Input
  *
  */
+/* eslint-disable react/prop-types */
 
 import React from 'react';
 import './input.scss';
@@ -63,8 +64,8 @@ const Input = props => {
   }
 
   return (
-    <div className='Input'>
-      <label className='Label'>{props.label}</label>
+    <div className="Input">
+      <label className="Label">{props.label}</label>
       {inputElement}
     </div>
   );

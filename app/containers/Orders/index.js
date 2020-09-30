@@ -3,12 +3,12 @@
  * Orders
  *
  */
+/* eslint-disable react/prop-types */
 
 import React, { useEffect, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
-
 import { useInjectSaga } from 'utils/injectSaga';
 import { useInjectReducer } from 'utils/injectReducer';
 import { makeSelectAuthenticated } from '../Auth/selectors';
@@ -43,8 +43,8 @@ export function Orders(props) {
     order = <Spinner />;
   }
 
-  if(!props.authenticated){
-    order = 'Please Login'
+  if (!props.authenticated) {
+    order = 'Please Login';
   }
 
   let btnClass = 'hidden';
@@ -75,7 +75,7 @@ export function Orders(props) {
       </div>
       <br />
       <br />
-      <button className={btnClass} onClick={props.bookHandler}>
+      <button type="button" className={btnClass} onClick={props.bookHandler}>
         Book
       </button>
     </Fragment>

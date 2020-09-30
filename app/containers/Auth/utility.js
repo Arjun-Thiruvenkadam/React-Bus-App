@@ -41,14 +41,14 @@ export const makeLoginPayload = state => {
 
 export const makeSignupPayload = state => {
   const payload = {
-    email: state.controls.email.value,
+    mail: state.controls.email.value,
     password: state.controls.password.value,
-    name: state.controls.name.value,
+    userName: state.controls.name.value,
   };
   return payload;
 };
 
-export const getResponse = async(state)=>{
+export const getResponse = async state => {
   let response;
   if (state.isSignup) {
     const authPayLoad = makeSignupPayload(state);
@@ -64,4 +64,4 @@ export const getResponse = async(state)=>{
     );
   }
   return response;
-}
+};

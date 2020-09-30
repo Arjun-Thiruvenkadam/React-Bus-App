@@ -11,6 +11,6 @@ export const scope = 'app.components.Logo';
 export default defineMessages({
   logo: {
     id: `${scope}.logo`,
-    defaultMessage: 'Aju\'s Bus',
+    defaultMessage: "Aju's Bus",
   },
 });

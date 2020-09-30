@@ -3,6 +3,7 @@
  * Auth
  *
  */
+/* eslint-disable react/prop-types */
 
 import React from 'react';
 import { connect } from 'react-redux';
@@ -25,7 +26,8 @@ export function Auth(props) {
   useInjectSaga({ key: 'auth', saga });
 
   const formElementsArray = [];
-  for (let key in props.auth.controls) {
+  // eslint-disable-next-line no-restricted-syntax
+  for (const key in props.auth.controls) {
     if (!props.auth.isSignup && !(key === 'name')) {
       formElementsArray.push({
         id: key,
@@ -62,6 +64,7 @@ export function Auth(props) {
 
   let titleMessage = <h2>Login to start your journey</h2>;
   if (props.auth.isSignup) {
+    // eslint-disable-next-line react/no-unescaped-entities
     titleMessage = <h2>Don't have an account? Sign up</h2>;
   }
 
@@ -76,11 +79,12 @@ export function Auth(props) {
       disabled = false;
       submitBtn = 'Success';
     }
-  } else {
-    if (props.auth.controls.email.valid && props.auth.controls.password.valid) {
-      disabled = false;
-      submitBtn = 'Success';
-    }
+  } else if (
+    props.auth.controls.email.valid &&
+    props.auth.controls.password.valid
+  ) {
+    disabled = false;
+    submitBtn = 'Success';
   }
 
   let error = null;
@@ -96,7 +100,7 @@ export function Auth(props) {
   }
 
   return (
-    <div className={'Auth'}>
+    <div className="Auth">
       {titleMessage}
       {authRedirect}
       <form onSubmit={props.submitHandler}>

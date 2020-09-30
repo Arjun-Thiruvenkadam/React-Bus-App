@@ -41,20 +41,20 @@ export function authSuccess(name, token) {
   };
 }
 
-export function switchAuthMode(){
-  return{
+export function switchAuthMode() {
+  return {
     type: actionTypes.SWITCH_AUTHMODE,
-  }
+  };
 }
 
-export function logout(){
-  return{
+export function logout() {
+  return {
     type: actionTypes.LOGOUT,
-  }
+  };
 }
 
-export function invalid(){
-  return{
+export function invalid() {
+  return {
     type: actionTypes.INVALID,
-  }
+  };
 }
