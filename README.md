@@ -12,6 +12,10 @@
 
 - Visit https://nestjs-bus-api.herokuapp.com/docs for a live demo of the API.
 
+## Demo
+
+- Visit https://react-bus-app.herokuapp.com/ for a live demo of the app.
+
 ## Installation
 
 ```bash

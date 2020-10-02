@@ -1,7 +1,7 @@
 import { takeEvery, put, select } from 'redux-saga/effects';
 import * as actionTypes from './constants';
 import * as actions from './actions';
-import makeSelectAuth from './selectors';
+import { makeSelectAuth } from './selectors';
 import { getResponse } from './utility';
 
 // Individual exports for testing
