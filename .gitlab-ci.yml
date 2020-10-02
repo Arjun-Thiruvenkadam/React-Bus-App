@@ -2,6 +2,7 @@ image: node:latest
 stages:
   - build
   - test
+  - deploy
 cache:
   paths:
     - node_modules/
@@ -17,3 +18,12 @@ testing:
   stage: test
   script: 
     - npm test
+production:
+  stage: deploy
+  script:
+    - apt-get update -qy
+    - apt-get install -y ruby-dev
+    - gem install dpl
+    - dpl --provider=heroku --app=react-bus-app --api-key=$HEROKU_PRODUCTION_API_KEY
+  only:
+    - master
