@@ -1,37 +1,69 @@
-/**
- *
- * Tests for Input
- *
- * @see https://github.com/react-boilerplate/react-boilerplate/tree/master/docs/testing
- *
- */
-
 import React from 'react';
 import { render } from 'react-testing-library';
-// import 'jest-dom/extend-expect'; // add some helpful assertions
-
 import Input from '../index';
 
 describe('<Input />', () => {
-  it('Expect to not log errors in console', () => {
-    const spy = jest.spyOn(global.console, 'error');
-    render(<Input />);
-    expect(spy).not.toHaveBeenCalled();
-  });
-
-  it('Expect to have additional unit tests specified', () => {
-    expect(true).toEqual(false);
-  });
-
-  /**
-   * Unskip this test to use it
-   *
-   * @see {@link https://jestjs.io/docs/en/api#testskipname-fn}
-   */
-  it.skip('Should render and match the snapshot', () => {
+  it('should render and match the snapshot for name', () => {
+    const config = {
+      elementType: 'input',
+      elementConfig: {
+        type: 'text',
+        placeholder: 'Name',
+      },
+      value: '',
+      validation: {
+        required: true,
+        minLength: 3,
+      },
+      valid: false,
+      touched: false,
+    };
     const {
       container: { firstChild },
-    } = render(<Input />);
+    } = render(
+      <Input
+        key={1}
+        elementType={config.elementType}
+        elementConfig={config.elementConfig}
+        value={config.value}
+        invalid={!config.valid}
+        shouldValidate={config.validation}
+        touched={config.touched}
+        changed={() => {}}
+      />,
+    );
+    expect(firstChild).toMatchSnapshot();
+  });
+
+  it('should render and match the snapshot for password', () => {
+    const config = {
+      elementType: 'input',
+      elementConfig: {
+        type: 'password',
+        placeholder: 'Password',
+      },
+      value: '',
+      validation: {
+        required: true,
+        minLength: 6,
+      },
+      valid: false,
+      touched: false,
+    };
+    const {
+      container: { firstChild },
+    } = render(
+      <Input
+        key={1}
+        elementType={config.elementType}
+        elementConfig={config.elementConfig}
+        value={config.value}
+        invalid={!config.valid}
+        shouldValidate={config.validation}
+        touched={!config.touched}
+        changed={() => {}}
+      />,
+    );
     expect(firstChild).toMatchSnapshot();
   });
 });

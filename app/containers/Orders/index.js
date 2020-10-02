@@ -91,7 +91,7 @@ const mapStateToProps = createStructuredSelector({
   authenticated: makeSelectAuthenticated(),
 });
 
-function mapDispatchToProps(dispatch) {
+export function mapDispatchToProps(dispatch) {
   return {
     bookHandler: () => dispatch(actions.bookTicket()),
     selectTicketHandler: ticketId => dispatch(actions.selectTicket(ticketId)),

@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Navigation /> should render and match the snapshot 1`] = `
+<ul
+  class="NavigationItems"
+>
+  <li
+    class="NavigationItem"
+  >
+    <a
+      aria-current="page"
+      class="active"
+      href="/"
+    >
+      <span>
+        Home
+      </span>
+    </a>
+  </li>
+  <li
+    class="NavigationItem"
+  >
+    <a
+      href="/order"
+    >
+      <span>
+        Book Tickets
+      </span>
+    </a>
+  </li>
+  <li
+    class="NavigationItem"
+  >
+    <a
+      href="/login"
+    >
+      <span>
+        Login
+      </span>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`<Navigation /> should render and match the snapshot with auth true 1`] = `
+<ul
+  class="NavigationItems"
+>
+  <li
+    class="NavigationItem"
+  >
+    <a
+      aria-current="page"
+      class="active"
+      href="/"
+    >
+      <span>
+        Home
+      </span>
+    </a>
+  </li>
+  <li
+    class="NavigationItem"
+  >
+    <a
+      href="/order"
+    >
+      <span>
+        Book Tickets
+      </span>
+    </a>
+  </li>
+  <li
+    class="NavigationItem"
+  >
+    <a
+      href="/login"
+    >
+      <span>
+        Login
+      </span>
+    </a>
+  </li>
+</ul>
+`;

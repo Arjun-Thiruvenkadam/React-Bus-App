@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Auth /> should render and match the snapshot 1`] = `
+<div
+  class="Auth"
+>
+  <h2>
+    Login to start your journey
+  </h2>
+  <form>
+    <div
+      class="Input"
+    >
+      <label
+        class="Label"
+      />
+      <input
+        class="InputElement"
+        placeholder="Mail Address"
+        type="email"
+        value=""
+      />
+    </div>
+    <div
+      class="Input"
+    >
+      <label
+        class="Label"
+      />
+      <input
+        class="InputElement"
+        placeholder="Password"
+        type="password"
+        value=""
+      />
+    </div>
+    <button
+      class="Button Disabled"
+      disabled=""
+    >
+      SUBMIT
+    </button>
+  </form>
+  <button
+    class="Button Danger"
+  >
+    SWITCH TO 
+    SIGNUP
+  </button>
+  <br />
+  <br />
+</div>
+`;
+
+exports[`<Auth /> should render and match the snapshot with login 1`] = `
+<div
+  class="Auth"
+>
+  <h2>
+    Login to start your journey
+  </h2>
+  <form>
+    <div
+      class="Loader"
+    >
+      <h3>
+        <span>
+          Loading...
+        </span>
+      </h3>
+    </div>
+    <button
+      class="Button Success"
+    >
+      SUBMIT
+    </button>
+  </form>
+  <button
+    class="Button Danger"
+  >
+    SWITCH TO 
+    SIGNUP
+  </button>
+  <br />
+  <h3
+    style="color: red;"
+  >
+    Check email and password
+  </h3>
+  <br />
+</div>
+`;
+
+exports[`<Auth /> should render and match the snapshot with spinner 1`] = `
+<div
+  class="Auth"
+>
+  <h2>
+    Don't have an account? Sign up
+  </h2>
+  <form>
+    <div
+      class="Loader"
+    >
+      <h3>
+        <span>
+          Loading...
+        </span>
+      </h3>
+    </div>
+    <button
+      class="Button Success"
+    >
+      SUBMIT
+    </button>
+  </form>
+  <button
+    class="Button Danger"
+  >
+    SWITCH TO 
+    LOGIN
+  </button>
+  <br />
+  <h3
+    style="color: red;"
+  >
+    Email already exists
+  </h3>
+  <br />
+</div>
+`;

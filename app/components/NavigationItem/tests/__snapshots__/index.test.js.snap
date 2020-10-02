@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NavigationItem /> should render and match the snapshot 1`] = `
+<li
+  class="NavigationItem"
+>
+  <a
+    aria-current="page"
+    class="active"
+    href="/"
+  >
+    Link
+  </a>
+</li>
+`;

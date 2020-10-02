@@ -11,7 +11,7 @@ export function Logout(props) {
   return <Redirect to="/" />;
 }
 
-function mapDispatchToProps(dispatch) {
+export function mapDispatchToProps(dispatch) {
   return {
     logoutHandler: () => dispatch(actions.logout()),
   };

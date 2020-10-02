@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<OrderSummary /> should render and match the snapshot 1`] = `
+<div
+  class="orderSummary"
+>
+  <h2>
+    <span>
+      Order Summary
+    </span>
+  </h2>
+  <h4>
+    <span>
+      Enjoy a safe and comfortable ride
+    </span>
+  </h4>
+  <h4>
+    <span>
+      Your tickets
+    </span>
+  </h4>
+  <p>
+    1
+     
+  </p>
+  <p>
+    2
+     
+  </p>
+  <h4>
+    <span>
+      Continue to checkout?
+    </span>
+  </h4>
+  <button
+    class="Button Danger"
+  >
+    <span>
+      Cancel
+    </span>
+  </button>
+  <button
+    class="Button Success"
+  >
+    <span>
+      Continue
+    </span>
+  </button>
+</div>
+`;

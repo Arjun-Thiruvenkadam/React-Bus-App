@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-testing-library';
 import { IntlProvider } from 'react-intl';
-
+import { MemoryRouter } from 'react-router';
 import HomePage from '../index';
 
 describe('<HomePage />', () => {
@@ -9,9 +9,11 @@ describe('<HomePage />', () => {
     const {
       container: { firstChild },
     } = render(
-      <IntlProvider locale="en">
-        <HomePage />
-      </IntlProvider>,
+      <MemoryRouter>
+        <IntlProvider locale="en">
+          <HomePage />
+        </IntlProvider>
+      </MemoryRouter>,
     );
     expect(firstChild).toMatchSnapshot();
   });

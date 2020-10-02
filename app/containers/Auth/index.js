@@ -12,7 +12,7 @@ import { compose } from 'redux';
 import { Redirect } from 'react-router-dom';
 import { useInjectSaga } from 'utils/injectSaga';
 import { useInjectReducer } from 'utils/injectReducer';
-import makeSelectAuth from './selectors';
+import { makeSelectAuth } from './selectors';
 import reducer from './reducer';
 import saga from './saga';
 import * as actions from './actions';
@@ -123,7 +123,7 @@ const mapStateToProps = createStructuredSelector({
   auth: makeSelectAuth(),
 });
 
-function mapDispatchToProps(dispatch) {
+export function mapDispatchToProps(dispatch) {
   return {
     inputChangeHandler: (event, controlName) =>
       dispatch(actions.inputChange(event, controlName)),

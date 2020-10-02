@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Input /> should render and match the snapshot for name 1`] = `
+<div
+  class="Input"
+>
+  <label
+    class="Label"
+  />
+  <input
+    class="InputElement"
+    placeholder="Name"
+    type="text"
+    value=""
+  />
+</div>
+`;
+
+exports[`<Input /> should render and match the snapshot for password 1`] = `
+<div
+  class="Input"
+>
+  <label
+    class="Label"
+  />
+  <input
+    class="InputElement Invalid"
+    placeholder="Password"
+    type="password"
+    value=""
+  />
+</div>
+`;

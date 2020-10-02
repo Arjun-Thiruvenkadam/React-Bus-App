@@ -1,19 +1,7 @@
 import { createSelector } from 'reselect';
 import { initialState } from './reducer';
 
-/**
- * Direct selector to the orders state domain
- */
-
-const selectOrdersDomain = state => state.orders || initialState;
-
-/**
- * Other specific selectors
- */
-
-/**
- * Default selector used by Orders
- */
+export const selectOrdersDomain = state => state.orders || initialState;
 
 export const makeSelectOrdering = () =>
   createSelector(

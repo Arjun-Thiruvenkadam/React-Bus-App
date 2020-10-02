@@ -1,37 +1,31 @@
-/**
- *
- * Tests for Layout
- *
- * @see https://github.com/react-boilerplate/react-boilerplate/tree/master/docs/testing
- *
- */
-
 import React from 'react';
 import { render } from 'react-testing-library';
-// import 'jest-dom/extend-expect'; // add some helpful assertions
-
+import { Provider } from 'react-redux';
+import { browserHistory } from 'react-router-dom';
+import { MemoryRouter } from 'react-router';
+import { IntlProvider } from 'react-intl';
 import Layout from '../index';
+import configureStore from '../../../configureStore';
 
 describe('<Layout />', () => {
-  it('Expect to not log errors in console', () => {
-    const spy = jest.spyOn(global.console, 'error');
-    render(<Layout />);
-    expect(spy).not.toHaveBeenCalled();
+  let store;
+
+  beforeAll(() => {
+    store = configureStore({}, browserHistory);
   });
 
-  it('Expect to have additional unit tests specified', () => {
-    expect(true).toEqual(false);
-  });
-
-  /**
-   * Unskip this test to use it
-   *
-   * @see {@link https://jestjs.io/docs/en/api#testskipname-fn}
-   */
-  it.skip('Should render and match the snapshot', () => {
+  it('should render and match the snapshot', () => {
     const {
       container: { firstChild },
-    } = render(<Layout />);
+    } = render(
+      <Provider store={store}>
+        <IntlProvider locale="en">
+          <MemoryRouter>
+            <Layout>Layout Container</Layout>
+          </MemoryRouter>
+        </IntlProvider>
+      </Provider>,
+    );
     expect(firstChild).toMatchSnapshot();
   });
 });

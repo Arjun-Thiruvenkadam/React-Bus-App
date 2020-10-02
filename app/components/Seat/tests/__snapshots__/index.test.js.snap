@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Seat /> should render and match the snapshot 1`] = `
+<div
+  class="order"
+>
+  <p>
+    SEAT : 
+    1
+  </p>
+</div>
+`;
+
+exports[`<Seat /> should render and match the snapshot with status booking 1`] = `
+<div
+  class="order booking"
+>
+  <p>
+    SEAT : 
+    1
+  </p>
+</div>
+`;
+
+exports[`<Seat /> should render and match the snapshot with status closed 1`] = `
+<div
+  class="order red"
+>
+  <p>
+    SEAT : 
+    1
+  </p>
+</div>
+`;

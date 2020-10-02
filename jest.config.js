@@ -6,6 +6,8 @@ module.exports = {
     '!app/app.js',
     '!app/global-styles.js',
     '!app/*/*/Loadable.{js,jsx}',
+    '!app/*/*/saga.js',
+    '!app/*/*/utility.js',
   ],
   coverageThreshold: {
     global: {

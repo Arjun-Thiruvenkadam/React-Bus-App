@@ -2,16 +2,54 @@
 
 exports[`<App /> should render and match the snapshot 1`] = `
 <div>
-  <Switch>
-    <Route
-      component={[Function]}
-      exact={true}
-      path="/"
-    />
-    <Route
-      component={[Function]}
-    />
-  </Switch>
+  <Layout>
+    <Switch>
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/"
+      />
+      <Route
+        component={
+          Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": [Function],
+            "compare": null,
+            "displayName": "Connect(Orders)",
+            "type": [Function],
+          }
+        }
+        path="/order"
+      />
+      <Route
+        component={
+          Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": [Function],
+            "compare": null,
+            "displayName": "Connect(Auth)",
+            "type": [Function],
+          }
+        }
+        path="/login"
+      />
+      <Route
+        component={
+          Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": [Function],
+            "compare": null,
+            "displayName": "Connect(Logout)",
+            "type": [Function],
+          }
+        }
+        path="/logout"
+      />
+      <Route
+        component={[Function]}
+      />
+    </Switch>
+  </Layout>
   <GlobalStyleComponent />
 </div>
 `;

@@ -1,9 +1,72 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<HomePage /> should render and match the snapshot 1`] = `
-<h1>
-  <span>
-    This is the HomePage container!
-  </span>
-</h1>
+<div
+  class="Home"
+>
+  <h1>
+    <span>
+      Welcome to Aju's Bus
+    </span>
+  </h1>
+  <img
+    alt="Bus"
+    src="IMAGE_MOCK"
+  />
+  <div
+    class="CardsHolder"
+  >
+    <br />
+    <h3>
+      <span>
+        Let's start your journey
+      </span>
+    </h3>
+    <br />
+    <div
+      class="Card"
+    >
+      <img
+        alt="Safety"
+        src="IMAGE_MOCK"
+      />
+      <h3>
+        Safety
+      </h3>
+      <p>
+        <span>
+          We provide only the best for our customers. We take extra measures to ensure your safe travel.
+        </span>
+      </p>
+    </div>
+    <div
+      class="Card"
+    >
+      <img
+        alt="Price"
+        src="IMAGE_MOCK"
+      />
+      <h3>
+        Price
+      </h3>
+      <p>
+        <span>
+          We always give you the lowest price with the best partner offers.
+        </span>
+      </p>
+    </div>
+    <br />
+    <br />
+    <a
+      class="Navlink"
+      href="/order"
+    >
+      <span>
+        Book Tickets
+      </span>
+    </a>
+    <br />
+    <br />
+  </div>
+</div>
 `;

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Spinner /> should render and match the snapshot 1`] = `
+<div
+  class="Loader"
+>
+  <h3>
+    <span>
+      Loading...
+    </span>
+  </h3>
+</div>
+`;

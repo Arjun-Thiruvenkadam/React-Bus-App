@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Modal /> should render and match the snapshot 1`] = `
+<div
+  class="backdrop"
+/>
+`;
+
+exports[`<Modal /> should render and match the snapshot with values hidden 1`] = `
+<div
+  class="Modal"
+  style="visibility: hidden; opacity: 0;"
+/>
+`;
