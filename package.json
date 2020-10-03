@@ -41,7 +41,7 @@
     "test:clean": "rimraf ./coverage",
     "test": "cross-env NODE_ENV=test jest --coverage",
     "test:watch": "cross-env NODE_ENV=test jest --watchAll",
-    "test:cypress": "cypress run",
+    "test:cypress": "cypress open",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
     "prettify": "prettier --write"
   },
