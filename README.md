@@ -20,7 +20,7 @@
 
 ```bash
 # Install
-$ git clone https://gitlab.com/arjunthiru/react-boilerplate-app.git
+$ git clone https://github.com/Arjun-Thiruvenkadam/React-App.git
 
 $ cd <PROJECT_NAME>
 
