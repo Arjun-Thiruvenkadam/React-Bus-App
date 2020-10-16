@@ -20,7 +20,7 @@
 
 ```bash
 # Install
-$ git clone https://github.com/Arjun-Thiruvenkadam/React-App.git
+$ git clone https://github.com/Arjun-Thiruvenkadam/React-Bus-App.git
 
 $ cd <PROJECT_NAME>
 
